@@ -1,0 +1,42 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+@for $i from 1 through 3 {
+    .btn#{$i} {
+        background: $brand-color1;
+        padding: 1rem;
+        color: white;
+        @include display-inline-flex;
+        border-radius: $border-radius;
+        align-items: center;
+        column-gap: 0.35rem;
+
+        &:hover {
+            background-color: $brand-color1-light-variation1;
+        }
+
+        @if $i==2 {
+            background: $brand-color2;
+
+            &:hover {
+                background-color: $brand-color2-light-variation1;
+            }
+        }
+
+
+
+        &:after {
+            content: " ";
+            width: 0;
+            height: 0;
+            border: 6px solid transparent;
+            border-top: 0;
+            border-bottom: 6px solid #fff;
+            transform: rotate(90deg);
+            position: relative;
+            left: 0;
+        }
+    }
+
+
+}

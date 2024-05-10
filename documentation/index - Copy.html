@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Documentation</title>
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=yes">
+  <link rel="stylesheet" href="assets/css/styles.css" type="text/css">
+  <link href="assets/css/prism.css" type="text/css" rel="stylesheet">
+  <link href="assets/css/prism-treeview.css" type="text/css" rel="stylesheet">
+  <link href="assets/css/prism-line-numbers.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="site-content">
+    <div class="sidebar">
+      <div class="logo">
+        <img src="assets/images/site-header-logo.svg" alt="site-header-logo" width="95" height="70" class="logo__img">
+      </div>
+      <h2 class="sidebar__title">Documentation</h2>
+      <nav class="main-navigation">
+        <div class="main-navigation">
+          <div class="main-navigation__trigger">Menu</div>
+          <div class="main-navigation__content">
+            <ul class="main-navigation__ul">
+              <li class="main-navigation__li"><a href="#introduction" class="main-navigation__a active">Introduction</a>
+              </li>
+              <li class="main-navigation__li"><a href="#features" class="main-navigation__a">Features</a></li>
+              <li class="main-navigation__li"><a href="#prerequisities" class="main-navigation__a">Prerequisites</a>
+                <ul class="main-navigation__submenu">
+                  <li class="main-navigation__li"><a href="#knowledge" class="main-navigation__a">Knowledge</a></li>
+                  <li class="main-navigation__li"><a href="#tools" class="main-navigation__a">Tools</a></li>
+                </ul>
+              </li>
+              <li class="main-navigation__li"><a href="#getting-started" class="main-navigation__a active">Getting
+                  Started</a>
+              </li>
+              <li class="main-navigation__li"><a class="main-navigation__a" href="#filestructure">File Structure</a>
+                <ul class="main-navigation__submenu">
+                  <li class="main-navigation__li"><a href="#assets" class="main-navigation__a">Assets</a>
+                    <ul class="main-navigation__submenu">
+                      <li class="main-navigation__li"><a href="#sass" class="main-navigation__a">sass</a>
+                        <!-- <ul class="main-navigation__submenu">
+                          <li class="main-navigation__li"><a href="#base" class="main-navigation__a">base</a></li>
+                          <li class="main-navigation__li"><a href="#abstracts" class="main-navigation__a">abstracts</a>
+                          </li>
+                          <li class="main-navigation__li"><a href="#layouts" class="main-navigation__a">layouts</a></li>
+                          <li class="main-navigation__li"><a href="#components"
+                              class="main-navigation__a">components</a>
+                          </li>
+                          <li class="main-navigation__li"><a href="#vendors" class="main-navigation__a">vendors</a></li>
+                        </ul> -->
+                      </li>
+                      <li class="main-navigation__li"><a href="#css" class="main-navigation__a">css</a></li>
+                      <li class="main-navigation__li"><a href="#fonts" class="main-navigation__a">fonts</a></li>
+                      <li class="main-navigation__li"><a href="#images" class="main-navigation__a">images</a></li>
+                      <li class="main-navigation__li"><a href="#js" class="main-navigation__a">js</a>
+                      </li>
+                    </ul>
+
+                  </li>
+                  <li class="main-navigation__li"><a href="#pages" class="main-navigation__a">Pages</a></li>
+                </ul>
+              </li>
+              <li class="main-navigation__li"><a class="main-navigation__a" href="#layout-structure">Layout
+                  Structure</a></li>
+              <li class="main-navigation__li"><a class="main-navigation__a" href="#visual-customization">Visual
+                  Customization</a>
+                <ul class="main-navigation__submenu">
+                  <li class="main-navigation__li"><a class="main-navigation__a" href="#color-theme">Color Theme</a></li>
+                  <li class="main-navigation__li"><a class="main-navigation__a" href="#typography">Typography</a></li>
+                  <li class="main-navigation__li"><a class="main-navigation__a" href="#icons">Icons</a></li>
+                  <li class="main-navigation__li"><a class="main-navigation__a" href="#favicon">Favicon</a></li>
+                </ul>
+              </li>
+              <li class="main-navigation__li"><a class="main-navigation__a" href="#elements-customization">Elements
+                  Customization</a>
+                <ul class="main-navigation__submenu">
+                  <li class="main-navigation__li"><a class="main-navigation__a" href="#layouts">Layouts</a>
+                    <ul class="main-navigation__submenu">
+                      <li class="main-navigation__li"><a class="main-navigation__a" href="#breadcrumb">Breadcrumb</a>
+                      </li>
+                      <li class="main-navigation__li"><a class="main-navigation__a" href="#buttons">Buttons</a>
+                      </li>
+                      <li class="main-navigation__li"><a class="main-navigation__a" href="#containers">Containers</a>
+                      </li>
+                      <li class="main-navigation__li"><a class="main-navigation__a" href="#content-layouts">Content
+                          Layouts</a>
+                      </li>
+                      <li class="main-navigation__li"><a class="main-navigation__a" href="#footer">Footer</a>
+                      </li>
+                      <li class="main-navigation__li"><a class="main-navigation__a" href="#forms">Forms</a>
+                      </li>
+                      <li class="main-navigation__li"><a class="main-navigation__a" href="#header">Header</a>
+                      </li>
+                      <li class="main-navigation__li"><a class="main-navigation__a" href="#subpage-banner">Subpage
+                          Banner</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+
+                <ul class="main-navigation__submenu">
+                  <li class="main-navigation__li"><a class="main-navigation__a" href="#components">Components</a>
+                    <ul class="main-navigation__submenu">
+                      <li class="main-navigation__li"><a class="main-navigation__a" href="#faq">FAQ</a></a></li>
+                      <li class="main-navigation__li"><a class="main-navigation__a" href="#hero-slider">Hero
+                          Slider</a></a></li>
+                      <li class="main-navigation__li"><a class="main-navigation__a" href="#main-navigation">Main
+                          Navigation</a></a></li>
+                      <li class="main-navigation__li"><a class="main-navigation__a" href="#move-to-top">Move To
+                          Top</a></a></li>
+                      <li class="main-navigation__li"><a class="main-navigation__a" href="#website-preloader">Site
+                          Preloader</a></a></li>
+                      <li class="main-navigation__li"><a class="main-navigation__a"
+                          href="#testimonials">Testimonials</a></a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <li class="main-navigation__li"><a class="main-navigation__a" href="#hosting">Hosting</a>
+            </li>
+            <li class="main-navigation__li"><a class="main-navigation__a" href="#credits">Credits</a>
+            </li>
+            <li class="main-navigation__li"><a class="main-navigation__a" href="#disclaimer">Disclaimer</a>
+            </li>
+          </div>
+        </div>
+
+      </nav>
+    </div>
+
+    <div class="main-content">
+
+
+
+      <section class="sub-content" id="introduction">
+        <h1>Introduction</h1>
+        <p>Thank you for choosing my Template. Amscen is an HTML responsive website template created for corporate and
+          formal kinds of busines websites. The template is not only created for any specific category of corporate
+          businesses, but it can be use for any businesses who needs a website with formal layout and structure. The
+          template has many features where the performance optimization and customization easiness are the major
+          advantages. Template is not included any larger frontend frameworks or libraries. So, anyone who has basic
+          knowledge of HTML, SASS, CSS & JS can be edit the template more easily. </p>
+      </section>
+      <section class="sub-content" id="features">
+        <h2>Features</h2>
+        <p>The template has many features which allow you to modify and customize the template based on your ideas and
+          requirements. Followings are the major features.</p>
+        <ul>
+          <li>Every part of the Template is Customizable</li>
+          <li>Cross Browser compatible Chrome, FireFox, Opera, Edge, Brave etc.</li>
+          <li>W3 Validated HTML Markup</li>
+          <li>W3 Validated CSS</li>
+          <li>Responsive Design with Mobile First Approach. If you are not familiar with it, please refer it here. <a
+              href="https://www.freecodecamp.org/news/taking-the-right-approach-to-responsive-web-design/"
+              class="hyperlink">Mobile First Approach</a>
+          </li>
+          <li>No bigger JavaScript Libraries</li>
+          <li>No bigger CSS Frameworks</li>
+          <li>Used native JavaScript and CSS for all user interphace designs</li>
+          <li>Template is Lightweight because not used numarous JS and CSS dependencies. Every page includes only one
+            JS and CSS dependency.</li>
+          <li>CSS created with BEM Methodology. If you are not familiar with it, please refer it here <a
+              href="https://en.bem.info/methodology/quick-start/" class="hyperlink">BEM Methodology</a></li>
+          <li>Performance Optimized</li>
+          <li>All image files are in webp format to improve performance</li>
+
+        </ul>
+      </section>
+      <section class="sub-content" id="prerequisities">
+        <h2>Prerequisites</h2>
+        <p>To edit and modify the template, there are 2 prerequisites where the first one is knowledge of the basic web
+          technology and experience of using a code editor. Knowledge on both of these will help you to easily make
+          changes as per your requirement. Followings are the details of prerequisites.</p>
+      </section>
+      <section class="sub-content" id="knowledge">
+        <h3>Knowledge</h3>
+        <p>In order to edit and modify the template, knowledge of basic web technology is essential. Followings are the
+          basic building blocks of websites and knowledge of this technologies allow you to modify the template easily.
+        </p>
+        <h4>HTML</h4>
+        <p>HTML knowledge required to edit the content part of the template. If you are not familiar with HTML, you can
+          learn here. <a href="https://www.w3schools.com/html/default.asp" class="hyperlink" target="_blank">Learn
+            HTML</a></p>
+
+        <h4>CSS</h4>
+        <p>Visual part of a web template is usually managed by the CSS. So, knowledge of CSS makes customization easier.
+          If you are not familiar with CSS, you can learn here. <a href="https://www.w3schools.com/css/default.asp "
+            class="hyperlink" target="_blank">Learn CSS</a></p>
+        <h4>SASS</h4>
+        <p>SASS is a superset of CSS which can do more dynamic operations which is not available in the CSS. So,
+          experience in SASS will help you to modify the Visual part of the template very efficiently. If you are new to
+          SASS please check this tutorial to learn it: <a href="https://sass-lang.com/guide/" target="_blank"
+            class="hyperlink">Learn SASS</a> </p>
+        <h4>JavaScript</h4>
+        <p>JavaScript knowledge is required to manage the script part of the website. If you are not familiar with
+          JavaScript, you can learn it here: <a href="https://www.w3schools.com/js/default.asp" class="hyperlink"
+            target="_blank">Learn
+            JavaScript</a>
+
+        </p>
+      </section>
+      <section class="sub-content" id="tools">
+        <h2>Tools</h2>
+        <p>Followings are the tools which is requied for editing, previewing and hosting of the template. A code editor
+          using to customize the template code and contents. A Web browser is using to preview the template and a
+          Hosting tool is using to upload the template in a server. Followings are some of the popular tools alongwith
+          download links.</p>
+        <h4>Code Editor</h4>
+        <ul>
+          <li>Visual Studio Code <a href="https://code.visualstudio.com/" class="hyperlink" target="_blank">Download</a>
+          </li>
+          <li>Dreamweaver <a href="https://www.adobe.com/in/products/dreamweaver.html" class="hyperlink"
+              target="_blank">Download</a></li>
+          <li>Sublime <a href="https://www.sublimetext.com/" class="hyperlink" target="_blank">Download</a></li>
+        </ul>
+        <h4>Web Browser</h4>
+        <ul>
+          <li>Chrome <a href="https://www.google.com/chrome/" class="hyperlink" target="_blank">Download</a></li>
+          <li>Mozilla Firefox <a href="https://www.mozilla.org/en-US/firefox/new/" class="hyperlink"
+              target="_blank">Download</a></li>
+          <li>Opera <a href="https://www.opera.com/" class="hyperlink" target="_blank">Download</a>
+          </li>
+          <li>Edge <a href="https://www.microsoft.com/en-us/edge/download" class="hyperlink"
+              target="_blank">Download</a>
+          </li>
+        </ul>
+        <h4>Hosting</h4>
+        <ul>
+          <li>FileZilla <a href="https://filezilla-project.org/download.php" class="hyperlink"
+              target="_blank">Download</a></li>
+          <li>cPanel <a href="https://cpanel.net/" class="hyperlink" target="_blank">Download</a></li>
+        </ul>
+      </section>
+      <section class="sub-content" id="getting-started">
+        <h2>Getting Started</h2>
+        <p>Unzip the folder you downloaded. You can see two folders after unzipping the folder. One is HTML and another
+          is Documentation where the HTML folder is the main folder that you need to upload to the server. You can start
+          to modify and use template once you are meet the above said prerequisites. It is not mandatory that you need
+          an expert or intermediate level experience. The prerequisites are means that a basic knowledge is also enough
+          to customize the template. Followings are the explanation of folder structure and role of each dependency
+          files in the template.</p>
+      </section>
+      <section class="sub-content" id="filestructure">
+        <h2>File Structure</h2>
+        <p>Following is the file structure of the HTML folder. </p>
+        <div class="file-tree-structure">
+          <pre>
+    <code class="language-treeview">
+    html/
+        |-- assets/
+        |     |-- sass/
+        |     |-- css/
+        |     |-- images/
+        |     |-- fonts/
+        |     |-- js/
+        |-- index.html
+        |-- about-us.html
+        |-- services.html
+        |-- services-detail-page.html
+        |-- contact-us.html
+        |-- newsletter-submission.html
+        |-- search-result.html
+        |-- search-result-not-found.html
+        |-- terms-and-conditions.html
+        |-- privacy-policy.html
+        |-- faq.html
+        |-- 404.html
+        |-- favicon.ico
+          </code></pre>
+        </div>
+      </section>
+      <section class="sub-content" id="assets">
+        <h3>Assets</h3>
+        <p>Assets is the only folder in the root of HTML folder and it is consisting of all dependency files such as
+          CSS, JavaScript, Fonts and Images files are included in the HTML template. Following is the explaination of
+          each folders of Assets folder and how it is structured.</p>
+        <div class="file-tree-structure">
+          <pre>
+  <code class="language-treeview">
+  |-- assets/
+  |   |-- sass/
+  |   |-- css/
+  |   |-- images/
+  |   |-- fonts/
+  |   |-- js/
+  </code></pre>
+
+        </div>
+      </section>
+      <section class="sub-content" id="sass">
+        <h3>sass</h3>
+        <p>SASS folder has 5 subfolders with various SASS partial files are included in it. Each folders are categorised
+          for a specific purpose which will cover in the Visual Customization section. Following is the folder structure
+          of SASS.</p>
+        <div class="file-structure">
+          <pre>
+      <code class="language-treeview">
+        sass/  
+            |-- base/
+            |     |-- _reset.scss               
+            |     |-- _typography.scss
+            |-- abstracts/
+            |     |-- _mixins.scss
+            |     |-- _variables.scss
+            |-- layouts/
+            |     |-- _containers.scss              
+            |     |-- _footer.scss              
+            |     |-- _forms.scss              
+            |     |-- _header.scss              
+            |     |-- _navigation.scss              
+            |-- components/
+            |     |-- _accordion.scss              
+            |     |-- _buttons.scss              
+            |     |-- _carousels.scss              
+            |     |-- _move-to-top.scss              
+            |     |-- _slider.scss              
+            |-- vendors/
+            |     |-- _swiper.scss              
+            |-- styles.scss
+              </code></pre>
+        </div>
+
+        <!-- <div class="sub-sub-content" id="base">
+          <h5>base</h5>
+          <p>base is the folder which has two files</p>
+          <div class="file-tree-structure">
+            <pre>
+            <code class="language-treeview">
+            base/  
+            |-- _reset.scss         
+            |-- _typography.scss</code>
+        </pre>
+          </div>
+          <div>
+            <h6>_reset</h6>
+            <p>Reset is the file which is makes uniform base styles for all browsers as some of the basic CSS
+              properties will behave differently in various browsers.</p>
+            <h6>_typography</h6>
+            <p>Typography file is managed the main typography for the website. </p>
+          </div>
+        </div> -->
+        <!-- <div class="sub-sub-content" id="abstracts">
+          <h5>abstracts</h5>
+          <p>abstracts includes all the dynamic level SASS operations.</p>
+          <div class="file-tree-structure">
+            <pre>
+            <code class="language-treeview">
+            abstracts/  
+            |-- _mixins.scss
+            |-- _variables.scss</code>         
+        </pre>
+          </div>
+          <div class="sub-content">
+            <h6>_mixins</h6>
+            <p>Mixin is one of the major part in SASS where some of the main part of CSS is managed such as media
+              queries
+              and CSS animation etc.</p>
+            <h6>_variables</h6>
+            <p>Variables are the dynamic value stored area where all the values of colors and font sizes are defiend.
+              Variabels make easy management of the value where you can change it one place and can produce the result
+              everywhere in the template.</p>
+          </div>
+        </div> -->
+
+        <!-- <div class="sub-sub-content" id="layouts">
+          <h5>layouts</h5>
+          <p>All the layout related styles are managed here.</p>
+          <div class="file-tree-structure">
+            <pre>
+        <code class="language-treeview">
+        layouts/
+          |-- _breadcrumbs
+          |-- _buttons    
+          |-- _containers    
+          |-- _content-layouts    
+          |-- _site-footer    
+          |-- _forms    
+          |-- _site-header    
+          |-- _helper-classes    
+          |-- _subpage-banner    
+        </code>
+</pre>
+          </div>
+
+          <h6>_breadcrumbs</h6>
+          <p>Website breadcrumb styles are managed here</p>
+          <h6>_buttons</h6>
+          <p>All the buttons styles are managed here</p>
+        </div> -->
+      </section>
+
+      <section class="sub-content" id="css">
+        <h3>css</h3>
+        <p>All the SASS files will be compiled to the CSS folder in to a single file which is ‘styles.css’. This is the
+          CSS file you need to include as the dependecy where all the template styles are coming from here. Following is
+          the folder structure.</p>
+        <div class="file-tree-structure">
+          <pre>
+            <code class="language-treeview">
+            css/  
+            |-- styles.css         
+        </pre></code>
+        </div>
+        <p>Following is the declaration style in "head" section of the template.
+        </p>
+        <div class="file-path-gray">
+          <code class="language-markup">
+            &lt;a href=&quot;assets/css/styles.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; &gt;
+             </code>
+        </div>
+      </section>
+      <section class="sub-content" id="fonts">
+        <h3>fonts</h3>
+        <p>Fonts folder contains fonts which is used as the Typography of the website. The template using Free Google
+          API Font called ‘Archivo’. Following is the link of the font.</p>
+
+        <div class="file-path-gray">
+          <a href="https://fonts.google.com/specimen/Archivo" class="hyperlink"
+            target="_blank">https://fonts.google.com/specimen/Archivo</a>
+        </div>
+      </section>
+      <section class="sub-content" id="images">
+        <h3>images</h3>
+        <p>Images is the folder where all imges are calling from. Photographic images are in WEBP format and Icon based
+          images are SVG format.</p>
+      </section>
+      <section class="sub-content" id="js">
+        <h3>js</h3>
+        <p>The template is mostly used native JavaScripts for all JS behaviours. Not used any kind of bigger JS
+          Libraries except SwiperJS which is essential for Hero Slider and Testimonial carousel. Following is the folder
+          structure of JavaScript. Similarly the SASS folder structure JS folder is also has two folders which is
+          ‘components’ and ‘vendors’. Following is the structure.</p>
+        <div class="file-tree-structure">
+          <pre>
+            <code class="language-treeview">
+            js/  
+            |-- components/         
+            |-- vendors/         
+            |-- scripts.js         
+        </pre></code>
+        </div>
+      </section>
+      <section class="sub-content" id="pages">
+        <h2>Pages</h2>
+        <p>Followings are all the pages which is inside of the main HTML folder</p>
+
+        <div class="sub-sub-content">
+          <div class="pages">
+            <ol>
+              <li><a href="../html/index.html" target="_blank">Home</a></li>
+              <li><a href="../html/about-us.html" target="_blank">About Us</a></li>
+              <li><a href="../html/services.html" target="_blank">Services</a></li>
+              <li><a href="../html/service-detail-page.html" target="_blank">Services Detail Page</a></li>
+              <li><a href="../html/contact-us.html" target="_blank">Contact Us</a></li>
+              <li><a href="../html/faq.html" target="_blank">FAQ</a></li>
+              <li><a href="../html/search-result.html" target="_blank">Search Result</a></li>
+              <li><a href="../html/search-result-not-found.html" target="_blank">Search Result Not Found</a></li>
+              <li><a href="../html/newsletter-submission.html" target="_blank">Newsletter Submission</a></li>
+              <li><a href="../html/terms-and-conditions.html" target="_blank">Terms & Conditions</a></li>
+              <li><a href="../html/privacy-policy.html" target="_blank">Privacy Policy</a></li>
+              <li><a href="../html/404.html" target="_blank">404 Page</a></li>
+            </ol>
+          </div>
+
+
+
+        </div>
+
+      </section>
+      <section class="sub-content" id="layout-structure">
+        <h2>Layout Structure</h2>
+        <p>Following is the brief of HTML layout structure of the template. This is the simple presentation to know the
+          basic structure of HTML elements and not included the detailed parts and comments for legibility</p>
+        <pre class="language-markup">
+  <code>
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang=&quot;en&quot;&gt;
+    
+    &lt;head&gt;
+        head contents goes here
+    &lt;/head&gt;
+    
+    &lt;body&gt;
+    
+        &lt;header class=&quot;site-header&quot;&gt;
+            Main Header contents goes here
+        &lt;/header&gt;
+    
+        &lt;main class=&quot;site-content&quot;&gt;
+
+          All content layouts goes here as sections which will have specific CSS classes. 
+          Following 3 layouts as an example.
+        
+          &lt;section class=&quot;hero-slider&quot;&gt;
+              layout of &quot;hero-slider&quot; section goes here				 
+            &lt;/section&gt;
+            
+            &lt;section class=&quot;who-we-are&quot;&gt;
+                  layout of &quot;who we are&quot; section goes here
+            &lt;/section&gt;
+    
+            &lt;section class=&quot;what-we-do&quot;&gt;
+                  layout of &quot;what we do&quot; section goes here
+            &lt;/section&gt;
+            
+        &lt;/main&gt;
+    
+        &lt;footer class=&quot;site-footer&quot;&gt;
+            Main Footer contents goes here
+        &lt;/footer&gt;
+          
+    &lt;/body&gt;
+    &lt;/html&gt;
+  </code>
+            </pre>
+      </section>
+      <section class="sub-content" id="visual-customization">
+        <h2>Visual Customization</h2>
+        <p>Every part of the Template is customizable as per your requirements. Followings are the explanation of
+          various sections of websites and files which is related to the template customization. Before customization
+          make sure that you are watching the SASS folder using any of the SASS compilers and it
+          is compiled to the CSS folder.</p>
+      </section>
+
+      <section class="sub-content" id="color-theme">
+        <h4>Color Theme</h4>
+        <p>All the colors in the template is defined using SASS variables. The Hex value colors are stored in a SASS
+          Variable and used everywhere. Following is the SASS variable file to modify</p>
+        <div class="file-path-css">
+          amscen/html/assets/sass/abstracts/_variables.scss
+        </div>
+
+      </section>
+
+      <section class="sub-content" id="typography">
+        <h4>Typography</h4>
+        <p>Following is the SASS partial file with typography details which is also covered in the Fonts section. In the
+          following partial file you can change the Typography size, color etc.</p>
+        <div class="file-path-css">
+          amscen/html/assets/sass/base/_typography.scss
+        </div>
+      </section>
+      <section class="sub-content" id="icons">
+        <h4>Icons</h4>
+        <p>All Icons used in the template is SVG format. The color an SVG canot be assigned with CSS. Colors of an SVG
+          is defined inside the SVG file. So you need to open the SVG file in the editor and change the value in the
+          code as follows.</p>
+        <pre class="language-markup">
+<code>&lt;svg&gt;&lt;path fill="ff0000"&gt;&lt;/svg&gt;
+</code></pre>
+      </section>
+      <section class="sub-content" id="favicon">
+        <h4>Favicon</h4>
+        <p>The template is used sample favicon which you can make it the logo of your company. Upload a PNG or JPG file
+          of 16x16 resolution and generate favicon in the following link. <a href="https://www.favicon-generator.org/ "
+            class="hyperlink" target="_blank">Favicon Generator</a></p>
+        <p>Put the favion in the image folder as follows</p>
+        <div class="file-path-general">
+          amscen/html/assets/sass/components/_site-preloader.scss
+        </div>
+        <p>Favicon is defined in the "head" section of the template as follows</p>
+        <pre class="language-markup">
+<code>&lt;link rel=&quot;icon&quot; type=&quot;image/x-icon&quot; href=&quot;favicon.ico&quot;&gt;</code></pre>
+      </section>
+      <section class="sub-content" id="elements-customization">
+        <h2>Elements Customization</h2>
+        <p>Before make customization, make sure you are watching the SASS folder and it is compiled to the CSS folder.
+          Followings are the major elements of the template and the steps of its customization. Once you watched the
+          SASS file, use the ‘inpsect’ option of the browser to select HTML elements, then the browser will show which
+          SASS file is related to the every single HTML elements in the page.</p>
+      </section>
+      <section class="sub-content" id="layouts">
+        <h3>Layouts</h3>
+        <p>Visual styles of all the layouts are managed from the ‘layout’ folder inside SASS main folder. All the layout
+          parts are splitted here with names. Layouts are not having dependency with JavaScript and you can make
+          modifcations only with the SASS declaratoins. You can use ‘inpsect option’ in browser to make modifications.
+          Following is a documentation on how to use inpsect in browser.</p>
+        <a href="https://blog.hubspot.com/website/how-to-inspect" target="_blank" class="hyperlink">How to use Browser
+          Inspect</a>
+      </section>
+      <section class="sub-content" id="breadcrumb">
+        <h4>Breadcrumb</h4>
+        <p>Visual styles of all the layouts are managed from the ‘layout’ folder inside SASS main folder. All the layout
+          parts are splitted here with names. Layouts are not having dependency with JavaScript and you can make
+          modifcations only with the SASS declaratoins. You can use ‘inpsect option’ in browser to make modifications.
+          Following is a documentation on how to use inpsect in browser.</p>
+      </section>
+      <section class="sub-content" id="buttons">
+        <h4>Buttons</h4>
+        <p>Visual styles of all the layouts are managed from the ‘layout’ folder inside SASS main folder. All the layout
+          parts are splitted here with names. Layouts are not having dependency with JavaScript and you can make
+          modifcations only with the SASS declaratoins. You can use ‘inpsect option’ in browser to make modifications.
+          Following is a documentation on how to use inpsect in browser.</p>
+      </section>
+      <section class="sub-content" id="containers">
+        <h4>Containers</h4>
+        <p>Visual styles of all the layouts are managed from the ‘layout’ folder inside SASS main folder. All the layout
+          parts are splitted here with names. Layouts are not having dependency with JavaScript and you can make
+          modifcations only with the SASS declaratoins. You can use ‘inpsect option’ in browser to make modifications.
+          Following is a documentation on how to use inpsect in browser.</p>
+      </section>
+      <section class="sub-content" id="content-layouts">
+        <h4>Content Layouts</h4>
+        <p>Visual styles of all the layouts are managed from the ‘layout’ folder inside SASS main folder. All the layout
+          parts are splitted here with names. Layouts are not having dependency with JavaScript and you can make
+          modifcations only with the SASS declaratoins. You can use ‘inpsect option’ in browser to make modifications.
+          Following is a documentation on how to use inpsect in browser.</p>
+      </section>
+      <section class="sub-content" id="footer">
+        <h4>Footer</h4>
+        <p>Visual styles of all the layouts are managed from the ‘layout’ folder inside SASS main folder. All the layout
+          parts are splitted here with names. Layouts are not having dependency with JavaScript and you can make
+          modifcations only with the SASS declaratoins. You can use ‘inpsect option’ in browser to make modifications.
+          Following is a documentation on how to use inpsect in browser.</p>
+      </section>
+      <section class="sub-content" id="forms">
+        <h4>Forms</h4>
+        <p>Visual styles of all the layouts are managed from the ‘layout’ folder inside SASS main folder. All the layout
+          parts are splitted here with names. Layouts are not having dependency with JavaScript and you can make
+          modifcations only with the SASS declaratoins. You can use ‘inpsect option’ in browser to make modifications.
+          Following is a documentation on how to use inpsect in browser.</p>
+      </section>
+      <section class="sub-content" id="header">
+        <h4>Header</h4>
+        <p>Visual styles of all the layouts are managed from the ‘layout’ folder inside SASS main folder. All the layout
+          parts are splitted here with names. Layouts are not having dependency with JavaScript and you can make
+          modifcations only with the SASS declaratoins. You can use ‘inpsect option’ in browser to make modifications.
+          Following is a documentation on how to use inpsect in browser.</p>
+      </section>
+      <section class="sub-content" id="subpage-banner">
+        <h4>Subpage Banner</h4>
+        <p>Visual styles of all the layouts are managed from the ‘layout’ folder inside SASS main folder. All the layout
+          parts are splitted here with names. Layouts are not having dependency with JavaScript and you can make
+          modifcations only with the SASS declaratoins. You can use ‘inpsect option’ in browser to make modifications.
+          Following is a documentation on how to use inpsect in browser.</p>
+      </section>
+      <section class="sub-content" id="components">
+        <h3>Components</h3>
+        <p>Visual styles of all the layouts are managed from the ‘layout’ folder inside SASS main folder. All the layout
+          parts are splitted here with names. Layouts are not having dependency with JavaScript and you can make
+          modifcations only with the SASS declaratoins. You can use ‘inpsect option’ in browser to make modifications.
+          Following is a documentation on how to use inpsect in browser.</p>
+      </section>
+      <section class="sub-content" id="faq">
+        <h4>FAQ</h4>
+        <p>Visual styles of all the layouts are managed from the ‘layout’ folder inside SASS main folder. All the layout
+          parts are splitted here with names. Layouts are not having dependency with JavaScript and you can make
+          modifcations only with the SASS declaratoins. You can use ‘inpsect option’ in browser to make modifications.
+          Following is a documentation on how to use inpsect in browser.</p>
+      </section>
+      <section class="sub-content" id="hero-slider">
+        <h3>Hero Slider</h3>
+        <p>Visual styles of all the layouts are managed from the ‘layout’ folder inside SASS main folder. All the layout
+          parts are splitted here with names. Layouts are not having dependency with JavaScript and you can make
+          modifcations only with the SASS declaratoins. You can use ‘inpsect option’ in browser to make modifications.
+          Following is a documentation on how to use inpsect in browser.</p>
+      </section>
+      <section class="sub-content" id="main-navigation">
+        <h4>Main Navigation</h4>
+        <p>Following is the HTML code of the Site Navigation. To add or remove the menu items, you can find the
+          following HTML part in every page.</p>
+        <pre class="language-markup">
+  <code>&lt;nav class=&quot;main-nav main-nav--one&quot;&gt;
+      Navigation Inner HTML Code Goes Here
+  &lt;/nav&gt;</code></pre>
+        <p>To change the colors of the menu and active state, you can edit the following SASS partial file.</p>
+        <div class="file-path-css">
+          amscen/html/assets/sass/3.layouts/_navigation.scss
+        </div>
+        <p>Find the following Script file to modify the JavaScript behaviour.</p>
+        <div class="file-path-general">
+          amscen/html/assets/js/components/main-navigation.js
+        </div>
+      </section>
+      <section class="sub-content" id="move-to-top">
+        <h3>Move To Top</h3>
+        <p>Visual styles of all the layouts are managed from the ‘layout’ folder inside SASS main folder. All the layout
+          parts are splitted here with names. Layouts are not having dependency with JavaScript and you can make
+          modifcations only with the SASS declaratoins. You can use ‘inpsect option’ in browser to make modifications.
+          Following is a documentation on how to use inpsect in browser.</p>
+      </section>
+      <section class="sub-content" id="website-preloader">
+        <h4>Website Preloader</h4>
+        <p>Following is the HTML code of preloader</p>
+        <pre class="language-markup">
+<code>&lt;div class=&quot;site-preloader1&quot;&gt;&lt;/div&gt;</code></pre>
+        <p>CSS selector can be find here</p>
+        <div class="file-path-css">
+          amscen/html/assets/sass/components/_site-preloader.scss
+        </div>
+      </section>
+
+      <section class="sub-content" id="logos">
+        <h4>Logos</h4>
+        <h5>Logo in Header</h5>
+        <p>Find the following code to locate the HTML of the logo in header.</p>
+        <pre class="language-markup">
+  <code>&lt;a class=&quot;site-header__logo&quot; href=&quot;index.html&quot;&gt;
+    &lt;img src=&quot;assets/images/site-header-logo.svg&quot; alt=&quot;amscen-logo&quot; class=&quot;site-header__logo-img&quot;
+          width=&quot;95&quot; height=&quot;70&quot;&gt;
+  &lt;/a&gt;</code></pre>
+        <p>The logo is used SVG image. Following is the file path of the logo which you can replace it with yours. Don’t
+          forget to replace the width and height of the new logo you have replaced.</p>
+
+        <div class="file-path-general">
+          amscen/html/assets/images/site-header-logo.svg
+        </div>
+        <h5>Logo in Footer</h5>
+        <p>Find the following code to locate the HTML of the logo in footer. </p>
+        <pre class="language-markup">
+  <code>&lt;img src=&quot;assets/images/site-footer-logo.svg&quot; alt=&quot;site-footer-logo&quot; class=&quot;site-footer__logo&quot;&gt;</code></pre>
+        <p>The Footer logo is the reverse format of the regular SVG logo used in the header. Following is the file path
+          of the logo which you can replace it with yours. Don’t forget to replace the width and height of the new logo
+          you have replaced.</p>
+
+        <div class="file-path-general">
+          amscen/html/assets/images/site-footer-logo.svg
+        </div>
+      </section>
+
+      <section class="sub-content" id="search-field">
+        <h4>Search Field</h4>
+        <p>Following is the HTML code of the Site Navigation. To add or remove the menu items, you can find the
+          following HTML part in every page.</p>
+        <pre class="language-markup">
+  <code>&lt;nav class=&quot;main-nav main-nav--one&quot;&gt;
+      Navigation Inner HTML Code Goes Here
+  &lt;/nav&gt;</code></pre>
+      </section>
+      <section class="sub-content" id="email">
+        <h4>E-mail</h4>
+        <p>Following is the HTML code of the Site Navigation. To add or remove the menu items, you can find the
+          following HTML part in every page.</p>
+        <pre class="language-markup">
+  <code>&lt;nav class=&quot;main-nav main-nav--one&quot;&gt;
+      Navigation Inner HTML Code Goes Here
+  &lt;/nav&gt;</code></pre>
+      </section>
+      <section class="sub-content" id="phonenumber">
+        <h4>Phone Number</h4>
+        <p>Following is the HTML code of the Site Navigation. To add or remove the menu items, you can find the
+          following HTML part in every page.</p>
+        <pre class="language-markup">
+  <code>&lt;nav class=&quot;main-nav main-nav--one&quot;&gt;
+      Navigation Inner HTML Code Goes Here
+  &lt;/nav&gt;</code></pre>
+      </section>
+      <section class="sub-content" id="socialmedia">
+        <h4>Social Media</h4>
+        <p>Following is the HTML code of the Site Navigation. To add or remove the menu items, you can find the
+          following HTML part in every page.</p>
+        <pre class="language-markup">
+  <code>&lt;nav class=&quot;main-nav main-nav--one&quot;&gt;
+      Navigation Inner HTML Code Goes Here
+  &lt;/nav&gt;</code></pre>
+      </section>
+      <section class="sub-content" id="heroslider">
+        <h4>Hero Slider</h4>
+        <p>Following is the HTML code of the Site Navigation. To add or remove the menu items, you can find the
+          following HTML part in every page.</p>
+        <pre class="language-markup">
+  <code>&lt;nav class=&quot;main-nav main-nav--one&quot;&gt;
+      Navigation Inner HTML Code Goes Here
+  &lt;/nav&gt;</code></pre>
+      </section>
+      <section class="sub-content" id="testimonials">
+        <h4>Testimonials</h4>
+        <p>Following is the HTML code of the Site Navigation. To add or remove the menu items, you can find the
+          following HTML part in every page.</p>
+        <pre class="language-markup">
+  <code>&lt;nav class=&quot;main-nav main-nav--one&quot;&gt;
+      Navigation Inner HTML Code Goes Here
+  &lt;/nav&gt;</code></pre>
+      </section>
+      <section class="sub-content" id="newsletter-signup">
+        <h4>Newsletter Signup</h4>
+        <p>Following is the HTML code of the Site Navigation. To add or remove the menu items, you can find the
+          following HTML part in every page.</p>
+        <pre class="language-markup">
+  <code>&lt;nav class=&quot;main-nav main-nav--one&quot;&gt;
+      Navigation Inner HTML Code Goes Here
+  &lt;/nav&gt;</code></pre>
+      </section>
+      <section class="sub-content" id="contents-layout">
+        <h4>Contents Layout</h4>
+        <p>Following is the HTML code of the Site Navigation. To add or remove the menu items, you can find the
+          following HTML part in every page.</p>
+        <pre class="language-markup">
+  <code>&lt;nav class=&quot;main-nav main-nav--one&quot;&gt;
+      Navigation Inner HTML Code Goes Here
+  &lt;/nav&gt;</code></pre>
+      </section>
+      <section class="sub-content" id="hosting">
+        <h4>Hosting</h4>
+        <p>Following is the HTML code of the Site Navigation. To add or remove the menu items, you can find the
+          following HTML part in every page.</p>
+        <pre class="language-markup">
+  <code>&lt;nav class=&quot;main-nav main-nav--one&quot;&gt;
+      Navigation Inner HTML Code Goes Here
+  &lt;/nav&gt;</code></pre>
+      </section>
+      <section class="sub-content" id="credits">
+        <h4>Credits</h4>
+        <p>Following is the HTML code of the Site Navigation. To add or remove the menu items, you can find the
+          following HTML part in every page.</p>
+        <pre class="language-markup">
+  <code>&lt;nav class=&quot;main-nav main-nav--one&quot;&gt;
+      Navigation Inner HTML Code Goes Here
+  &lt;/nav&gt;</code></pre>
+      </section>
+      <section class="sub-content" id="disclaimer">
+        <h4>Disclaimer</h4>
+        <p>Following is the HTML code of the Site Navigation. To add or remove the menu items, you can find the
+          following HTML part in every page.</p>
+        <pre class="language-markup">
+  <code>&lt;nav class=&quot;main-nav main-nav--one&quot;&gt;
+      Navigation Inner HTML Code Goes Here
+  &lt;/nav&gt;</code></pre>
+      </section>
+    </div>
+  </div>
+
+  <script src="assets/js/scripts.js"></script>
+  <script src="assets/js/prism.js"></script>
+  <script src="assets/js/prism-line-numbers.js"></script>
+  <script src="assets/js/prism-treeview.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+@use '../abstracts/mixins' as *;
+
+/* Main Containers: Start */
+
+.container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    // border: 2px solid red;
+
+    @include xl-min {
+        width: 1170px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+/* Main Containers: End */
+
+.site-content {
+    &>.site-content__section {
+        // margin-bottom: 3rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+
+        @include md-min {
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+        }
+
+        @include lg-min {
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+        }
+    }
+}
+
+.site-content__section-padding-top-half {
+    padding-top: 1rem !important;
+
+    @include md-min {
+        padding-top: 2rem !important;
+    }
+
+    @include lg-min {
+        padding-top: 3rem !important;
+    }
+}
+
+.site-content__section-padding-bottom-half {
+    padding-bottom: 1rem !important;
+
+    @include md-min {
+        padding-bottom: 2rem !important;
+    }
+
+    @include lg-min {
+        padding-bottom: 3rem !important;
+    }
+}
+
+.site-content__section {
+    // border: 1px solid green;
+    // padding-top: 1.5rem;
+    // padding-bottom: 1.5rem;
+    // border: 2px solid orange;
+
+
+
+    @include xl-min {
+        // padding-top: 4rem;
+        // padding-bottom: 4rem;
+    }
+
+    >.container {
+        // padding-top: 1rem;
+        // padding-bottom: 1rem;
+        // border: 1px solid #efefef;
+
+        @include md-min {
+            // padding-top: 3rem;
+            // padding-bottom: 3rem;
+        }
+    }
+
+
+}

@@ -1,0 +1,153 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+/* Form Global Styles: Starts */
+.form {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+    font-size: 12px;
+}
+
+.form__row {
+    display: grid;
+    grid-column-gap: .75rem;
+}
+
+.form__row-heading {
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.form__col {
+    display: grid;
+    grid-gap: .65rem;
+}
+
+.form__group {
+    display: grid;
+    grid-gap: .65rem;
+}
+
+.form__field-container {}
+
+.form__input-text {
+    width: 100%;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    padding: .5rem .65rem;
+    border: 1px solid $light-gray1;
+    box-sizing: border-box;
+    border-radius: .25rem;
+}
+
+.form__input-text::focus {
+    border: 1px solid red;
+}
+
+.form__input-textarea-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.form__input-textarea {
+    border: 1px solid $light-gray1;
+    border-radius: .25rem;
+    margin-bottom: .5rem;
+    padding: .5rem;
+    font-family: inherit;
+    width: 100%;
+    height: 100%;
+}
+
+.form__input-select {
+    width: 100%;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    margin-bottom: .5rem;
+    padding: .5rem .65rem;
+    border: 1px solid #bfbcbc;
+    box-sizing: border-box;
+    border-radius: .25rem;
+}
+
+.form__input-file {
+    background: #fff;
+    height: 2.5rem;
+    align-items: center;
+    justify-content: center;
+    line-height: 2.5rem;
+    border: 1px solid #bfbcbc;
+    font-size: .75rem;
+    display: flex;
+    text-indent: .5rem;
+    border-radius: .25rem;
+}
+
+.form__textarea {
+    border: 1px solid #bfbcbc;
+    height: 100%;
+}
+
+.form__label {
+    margin-bottom: .5rem;
+    display: flex;
+}
+
+.form__validation {
+    color: red;
+    margin-top: .35rem;
+    display: none;
+}
+
+input[type="date"] {
+    text-transform: uppercase;
+}
+
+input[type="submit"] {
+    padding: .75rem 1rem;
+    border: 0;
+    cursor: pointer;
+    background: #555;
+    color: white;
+    border: none;
+}
+
+/* Form Global Styles: Ends */
+
+/* Custom Styles: Starts */
+.contact-us-form {
+
+    &__heading {
+        font-size: 1.30rem;
+    }
+
+    &__form-tag {
+        background-color: $light-gray2;
+        padding: 1.5rem;
+        border-radius: $border-radius;
+
+        @include md-min {
+            padding: 3rem;
+        }
+    }
+}
+
+.contact-us-form__row1 {
+    margin-bottom: 1rem;
+}
+
+.contact-us-form__row1 .form__group {
+    @include md-min {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+.contact-us-form__row2 .form__group {}
+
+.contact-us-form__row4 .form__group {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* Custom Styles: Ends */

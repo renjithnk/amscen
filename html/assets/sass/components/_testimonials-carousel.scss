@@ -1,0 +1,99 @@
+@use '../vendors/swiper' as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+
+.testimonials {
+    background: $light-gray3;
+
+    &__heading {
+        text-align: center;
+
+        @include md-min {
+            margin-bottom: 3rem;
+        }
+    }
+}
+
+.testimonials-carousel {
+    &__list {}
+
+    &__list-item {
+        background-color: white;
+        padding: 2rem;
+        text-align: center;
+        display: grid;
+        grid-gap: 1rem;
+        border-radius: $border-radius;
+        height: initial;
+
+        @include md-min {
+            padding: 3rem;
+        }
+
+        @include lg-min {
+            padding: 3rem 4rem;
+        }
+    }
+
+    &__list-icon {
+        display: inline-flex;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__description {}
+
+    &__photo {
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 50%;
+    }
+
+    &__name-and-designation {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__name {
+        margin-bottom: 0;
+        font-weight: 600;
+    }
+
+    &__designation {
+        margin-bottom: 0;
+    }
+
+
+    .testimonials-carousel-pagination {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: .5rem;
+
+        @include md-min {
+            bottom: 4rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        @include xl-min {
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    .swiper-pagination-bullet {
+        width: 15px;
+        height: 15px;
+        display: inline-block;
+        border-radius: 100%;
+        background: $brand-color1;
+    }
+
+    .swiper-pagination-bullet-active {
+        background: $brand-color2;
+    }
+}

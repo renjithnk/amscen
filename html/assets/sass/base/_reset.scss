@@ -1,0 +1,64 @@
+@use '../abstracts/variables' as *;
+
+*,
+*:hover,
+*:focus {
+    box-sizing: border-box;
+    outline: none;
+}
+
+html {
+    font-size: 1rem;
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+body,
+ul,
+p {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    color: #555;
+}
+
+a {
+    text-decoration: none;
+    color: #666;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    // image-rendering: optimizespeed;
+    // border-radius: $border-radius;
+}
+
+ul {
+    list-style: disc;
+    margin-bottom: 1.5rem;
+    // padding-left: 2rem;
+    margin-left: 1rem;
+    line-height: 1.25;
+}
+
+.ul-disable-default {
+    list-style: none;
+    margin-left: 0;
+}

@@ -1,0 +1,316 @@
+@use '../abstracts/mixins' as *;
+
+/* Web Font: Start */
+
+/* thin */
+@font-face {
+    font-family: "Archivo";
+    src: url("../fonts/archivo-thin.woff2") format("woff2"),
+        url("../fonts/archivo-thin.woff") format("woff");
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* thin italic */
+@font-face {
+    font-family: "Archivo";
+    src: url("../fonts/archivo-thin-italic.woff2") format("woff2"),
+        url("../fonts/archivo-thin-italic.woff") format("woff");
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* extralight */
+@font-face {
+    font-family: "Archivo";
+    src: url("../fonts/archivo-extralight.woff2") format("woff2"),
+        url("../fonts/archivo-extralight.woff") format("woff");
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* extralight italic */
+@font-face {
+    font-family: "Archivo";
+    src: url("../fonts/archivo-extralight-italic.woff2") format("woff2"),
+        url("../fonts/archivo-extralight-italic.woff") format("woff");
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* light */
+@font-face {
+    font-family: "Archivo";
+    src: url("../fonts/archivo-light.woff2") format("woff2"),
+        url("../fonts/archivo-light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* light italic */
+@font-face {
+    font-family: "Archivo";
+    src: url("../fonts/archivo-light-italic.woff2") format("woff2"),
+        url("../fonts/archivo-light-italic.woff") format("woff");
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* regular */
+@font-face {
+    font-family: "Archivo";
+    src: url("../fonts/archivo-regular.woff2") format("woff2"),
+        url("../fonts/archivo-regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* regular italic */
+@font-face {
+    font-family: "Archivo";
+    src: url("../fonts/archivo-regular-italic.woff2") format("woff2"),
+        url("../fonts/archivo-regular-italic.woff") format("woff");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* medium */
+@font-face {
+    font-family: "Archivo";
+    src: url("../fonts/archivo-medium.woff2") format("woff2"),
+        url("../fonts/archivo-medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* medium italic */
+@font-face {
+    font-family: "Archivo";
+    src: url("../fonts/archivo-medium-italic.woff2") format("woff2"),
+        url("../fonts/archivo-medium-italic.woff") format("woff");
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* semibold */
+@font-face {
+    font-family: "Archivo";
+    src: url("../fonts/archivo-semibold.woff2") format("woff2"),
+        url("../fonts/archivo-semibold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* semibold italic */
+@font-face {
+    font-family: "Archivo";
+    src: url("../fonts/archivo-semibold-italic.woff2") format("woff2"),
+        url("../fonts/archivo-semibold-italic.woff") format("woff");
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* bold */
+@font-face {
+    font-family: "Archivo";
+    src: url("../fonts/archivo-bold.woff2") format("woff2"),
+        url("../fonts/archivo-bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* bold italic */
+@font-face {
+    font-family: "Archivo";
+    src: url("../fonts/archivo-bold-italic.woff2") format("woff2"),
+        url("../fonts/archivo-bold-italic.woff") format("woff");
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* extrabold */
+@font-face {
+    font-family: "Archivo";
+    src: url("../fonts/archivo-extrabold.woff2") format("woff2"),
+        url("../fonts/archivo-extrabold.woff") format("woff");
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* extrabold italic */
+@font-face {
+    font-family: "Archivo";
+    src: url("../fonts/archivo-extrabold-italic.woff2") format("woff2"),
+        url("../fonts/archivo-extrabold-italic.woff") format("woff");
+    font-weight: 800;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* black */
+@font-face {
+    font-family: "Archivo";
+    src: url("../fonts/archivo-black.woff2") format("woff2"),
+        url("../fonts/archivo-black.woff") format("woff");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* black italic */
+@font-face {
+    font-family: "Archivo";
+    src: url("../fonts/archivo-black-italic.woff2") format("woff2"),
+        url("../fonts/archivo-black-italic.woff") format("woff");
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Web Font: End */
+
+html {
+    font-family: 'Archivo', Helvetica, sans-serif;
+}
+
+// @for $i from 1 through 6 {
+//     h#{$i} {
+//         font-size: 2rem - ($i * .35rem);
+//         margin-bottom: 1.5rem;
+//         font-weight: 700;
+
+//         @include sm-min {
+//             font-size: 2rem - ($i * .20rem);
+//         }
+
+//         @include md-min {
+//             font-size: 2rem - ($i * .05rem);
+//             margin-bottom: 2rem;
+//         }
+//     }
+// }
+h1 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    // letter-spacing: -.06rem;
+
+    @include md-min {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    @include lg-min {
+        font-size: 1.65rem;
+    }
+}
+
+
+h2 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    // letter-spacing: -.06rem;
+
+    @include md-min {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    @include lg-min {
+        font-size: 1.55rem;
+    }
+}
+
+
+h3 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    // letter-spacing: -.06rem;
+
+    @include md-min {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    @include lg-min {
+        font-size: 1.30rem;
+    }
+}
+
+
+h4 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    // letter-spacing: -.06rem;
+
+    @include md-min {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    @include lg-min {
+        font-size: 1.20rem;
+    }
+}
+
+h5 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    // letter-spacing: -.06rem;
+
+    @include md-min {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    @include lg-min {
+        font-size: 1.075rem;
+    }
+}
+
+h6 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    // letter-spacing: -.06rem;
+
+    @include md-min {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    @include lg-min {
+        font-size: 1rem;
+    }
+}
+
+
+
+p {
+    margin-bottom: 1em;
+    line-height: 1.35;
+    font-weight: 400;
+
+    @include md-min {
+        margin-bottom: 1.25rem;
+    }
+}

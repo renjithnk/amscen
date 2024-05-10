@@ -1,0 +1,44 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+
+body {
+    // height: 100vh;
+    // border: 3px solid red;
+    // max-height: 100vh;
+    // overflow-y: hidden;
+}
+
+.site-preloader1 {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    z-index: 10;
+
+    &:after {
+        content: '';
+        border-radius: 50%;
+        border-top: 4px solid $brand-color2;
+        border-right: 4px solid $brand-color2;
+        border-bottom: 4px solid $brand-color1;
+        border-left: 4px solid $brand-color1;
+        width: 35px;
+        height: 35px;
+        @include animation(site-preloader1, .85s, linear, 0s, infinite, normal, forwards, running);
+        display: block;
+    }
+}
+
+@include keyframes(site-preloader1) {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
