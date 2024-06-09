@@ -233,12 +233,13 @@ a.hyperlink {
 
     &__title {
         margin-bottom: 0.75rem;
-        margin-top: 0.35rem;
+        margin-top: 0.75rem;
 
         @include xl-min {
             font-size: 1.20rem;
             font-weight: 400;
             margin-bottom: 2rem;
+            margin-top: 2rem;
         }
     }
 }
